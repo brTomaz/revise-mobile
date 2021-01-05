@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render a complete Logo by default 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/images/logo.png",
+    }
+  }
+  testID="logo"
+/>
+`;
