@@ -10,6 +10,6 @@ This project uses lot of stuff as:
 
 ## Links
 
-- [Application](https://revise.vercel.app)
+- [Web Application](https://revise.vercel.app)
 - [Application administrator](https://revise-app-api.herokuapp.com)
 - [Design System](https://brtomaz.github.io/revise-client/)
