@@ -1,2 +1,6 @@
+export { default as Answer } from './Answer'
 export { default as Logo } from './Logo'
 export { default as NavigationButton } from './NavigationButton'
+export { default as Question } from './Question'
+export { default as QuizInfo } from './QuizInfo'
+export { default as Statement } from './Statement'

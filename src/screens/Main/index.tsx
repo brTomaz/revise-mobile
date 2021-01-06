@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator } from 'react-native'
 
-import Logo from '@/components/Logo'
-import Question from '@/components/Question'
-import QuizInfo from '@/components/QuizInfo'
+import { Logo, Question, QuizInfo } from '@/components'
 import { TypeQuestion } from '@/domain/entities/question'
+import { shuffleQuestions } from '@/helpers'
 import { useQuiz } from '@/hooks/quiz'
 import { getQuestionsFromAPI } from '@/services/api/usecases/get-questions'
 import theme from '@/styles/theme'
 import * as Styles from './styles'
-import { shuffleQuestions } from '@/helpers'
 
 enum State {
   Loading = 'Loading',
