@@ -13,6 +13,7 @@ module.exports = {
           '@': path.join(__dirname, 'src')
         }
       }
-    ]
+    ],
+    ['module:react-native-dotenv']
   ]
 }

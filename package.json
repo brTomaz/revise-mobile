@@ -10,9 +10,18 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.8.10",
+    "@react-navigation/stack": "^5.12.8",
+    "axios": "^0.21.1",
     "react": "16.13.1",
     "react-native": "0.63.3",
     "react-native-gesture-handler": "^1.9.0",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-render-html": "^5.0.1",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-screens": "^2.16.1",
+    "react-native-toast-message": "^1.4.2",
     "react-native-vector-icons": "^7.1.0",
     "styled-components": "^5.2.1"
   },
@@ -24,6 +33,7 @@
     "@testing-library/react-native": "^6.0.0",
     "@types/jest": "^25.2.3",
     "@types/react-native": "^0.63.2",
+    "@types/react-native-dotenv": "^0.2.0",
     "@types/react-native-vector-icons": "^6.4.6",
     "@types/react-test-renderer": "^16.9.2",
     "@types/styled-components-react-native": "^5.1.0",
@@ -47,6 +57,7 @@
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
     "react-dom": "16.13.1",
+    "react-native-dotenv": "^2.4.3",
     "react-test-renderer": "^17.0.1",
     "ts-jest": "^26.4.4",
     "typescript": "^3.8.3"
