@@ -6,7 +6,7 @@
 This project uses lot of stuff as:
 
 - [TypeScript](https://www.typescriptlang.org/)
-- React Native
+- [React Native](https://reactnative.dev/)
 
 ## Links
 
