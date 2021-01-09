@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Toast from 'react-native-toast-message'
 
+import { getPoints, showToast } from '@/helpers'
 import { useQuiz } from '@/hooks/quiz'
 import * as Styles from './styles'
-import { getPoints } from '@/helpers'
 
 export type TextProps = {
   state: string
@@ -32,24 +31,30 @@ const Answer = ({ text, answerIndex, correctAnswerIndex }: AnswerProps) => {
     currentQuestionIndex
   } = useQuiz()
 
+  const updateQuizContext = (pointsEarned: number) => {
+    setPoints(pointsEarned + points)
+    setCurrentQuestionIndex(currentQuestionIndex + 1)
+    setCurrentTries(0)
+  }
+
   const handlePress = () => {
     setCurrentTries(currentTries + 1)
 
-    if (answerIndex + 1 !== correctAnswerIndex) {
+    const isWrongAnswer = answerIndex !== correctAnswerIndex
+
+    if (isWrongAnswer) {
       setState(State.Wrong)
     } else {
       setState(State.Correct)
-      const pointsEarned = getPoints(currentTries + 1)
+      const pointsEarned = getPoints(currentTries)
 
-      Toast.show({
-        type: 'success',
-        text1: `Ganhou ${pointsEarned} ponto(s)`,
-        text2: `Acertou na ${currentTries + 1}ª tentativa`
-      })
+      showToast(
+        'success',
+        `Ganhou ${pointsEarned} ponto(s)`,
+        `Acertou na ${currentTries + 1}ª tentativa`
+      )
 
-      setPoints(pointsEarned + points)
-      setCurrentQuestionIndex(currentQuestionIndex + 1)
-      setCurrentTries(0)
+      updateQuizContext(pointsEarned)
     }
   }
 
