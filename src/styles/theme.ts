@@ -1,4 +1,4 @@
-const theme = {
+export default {
   colors: {
     primary: '#2D3D88',
     secondary: '#2DC2C3',
@@ -12,6 +12,4 @@ const theme = {
     light: 'Quicksand-Light',
     regular: 'Quicksand-Regular'
   }
-}
-
-export default theme
+} as const
