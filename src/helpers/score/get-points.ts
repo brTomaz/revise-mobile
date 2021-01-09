@@ -8,7 +8,9 @@ export default function getPoints(tries: number) {
       return 3
     case 4:
       return 2
-    default:
+    case 5:
       return 1
+    default:
+      return 0
   }
 }
