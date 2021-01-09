@@ -34,4 +34,18 @@ describe('<Answer />', () => {
       color: theme.colors.error
     })
   })
+
+  it('should render the Answer with secondary color if the correct option is pressed', () => {
+    const { getByText } = renderWithTheme(
+      <Answer text="any text" correctAnswerIndex={1} answerIndex={1} />
+    )
+
+    const answer = getByText(/any text/)
+
+    fireEvent.press(answer)
+
+    expect(answer).toHaveStyle({
+      color: theme.colors.secondary
+    })
+  })
 })
