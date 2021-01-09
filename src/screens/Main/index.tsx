@@ -8,6 +8,7 @@ import { useQuiz } from '@/hooks/quiz'
 import { getQuestionsFromAPI } from '@/services/api/usecases/get-questions'
 import theme from '@/styles/theme'
 import * as Styles from './styles'
+import { Results } from '@/screens'
 
 enum State {
   Loading = 'Loading',
@@ -28,13 +29,15 @@ const Main = () => {
     loadQuestions()
   }, [])
 
+  const hasNextQuestion = currentQuestionIndex !== questions.length
+
   if (state === State.Loading) {
     return (
       <Styles.LoaderWrapper>
         <ActivityIndicator size="large" color={theme.colors.secondary} />
       </Styles.LoaderWrapper>
     )
-  } else {
+  } else if (hasNextQuestion) {
     return (
       <Styles.ScrollScreen>
         <Styles.Wrapper>
@@ -61,6 +64,8 @@ const Main = () => {
         </Styles.Wrapper>
       </Styles.ScrollScreen>
     )
+  } else {
+    return <Results />
   }
 }
 

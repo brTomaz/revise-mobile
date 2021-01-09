@@ -61,7 +61,7 @@ const Question = ({
                 <Answer
                   text={answer}
                   answerIndex={index}
-                  correctAnswerIndex={correctAnswer}
+                  correctAnswerIndex={correctAnswer - 1}
                 />
               </Styles.AnswerWrapper>
             ))}
