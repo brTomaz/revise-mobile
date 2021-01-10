@@ -6,7 +6,7 @@ import { Answer } from '@/components'
 import { renderWithTheme } from '@/helpers'
 import theme from '@/styles/theme'
 
-jest.mock('../../../../node_modules/react-native-toast-message/src/index')
+jest.mock('../../../../node_modules/react-native-toast-message')
 
 describe('<Answer />', () => {
   it('should render the Answer with white color before clicking', () => {
