@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import 'jest-styled-components'
 import React from 'react'
-import { fireEvent } from '@testing-library/react-native'
 import { useNavigation } from '@react-navigation/native'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { fireEvent } from '@testing-library/react-native'
+import { ReactTestInstance } from 'react-test-renderer'
 import { mocked } from 'ts-jest/utils'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { renderWithTheme } from '@/helpers'
 import { NavigationButton } from '@/components'
+import theme from '@/styles/theme'
 
 jest.mock('@react-navigation/native', () => {
   const originalModule = jest.requireActual('@react-navigation/native')
@@ -27,18 +30,35 @@ mockUseNavigation.mockReturnValue({
 } as any)
 
 describe('<NavigationButton />', () => {
-  it('should navigate to the path specified in navigateTo', () => {
+  let navigationButton: ReactTestInstance
+  let icon: ReactTestInstance
+
+  beforeEach(() => {
     const { getByTestId } = renderWithTheme(
       <NavigationButton
         text="Start"
-        icon={<Icon size={24} name="chevron-right" />}
+        icon={
+          <Icon size={24} name="chevron-right" testID="chevron-right-icon" />
+        }
         navigateTo="Main"
         testID="navigate-to-main"
       />
     )
+    navigationButton = getByTestId('navigate-to-main')
+    icon = getByTestId('chevron-right-icon')
+  })
 
-    fireEvent.press(getByTestId('navigate-to-main'))
+  it('should navigate to the path specified in navigateTo', () => {
+    fireEvent.press(navigationButton)
 
     expect(navigate).toHaveBeenCalledWith('Main')
+  })
+
+  it('should render with correct styles', () => {
+    expect(navigationButton).toHaveStyle({
+      backgroundColor: theme.colors.secondary,
+      borderRadius: 8,
+      flexDirection: 'row'
+    })
   })
 })
