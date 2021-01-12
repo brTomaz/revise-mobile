@@ -7,12 +7,14 @@ type NavigationButtonProps = {
   text: string
   icon: ReactNode
   navigateTo: string
+  testID?: string
 }
 
 const NavigationButton = ({
   text,
   icon,
-  navigateTo
+  navigateTo,
+  testID
 }: NavigationButtonProps) => {
   const navigation = useNavigation()
 
@@ -21,7 +23,7 @@ const NavigationButton = ({
   }
 
   return (
-    <Styles.NavigationButton onPress={handleNavigation}>
+    <Styles.NavigationButton testID={testID} onPress={handleNavigation}>
       <Styles.ButtonText>{text}</Styles.ButtonText>
       <Styles.IconContainer>{icon}</Styles.IconContainer>
     </Styles.NavigationButton>
