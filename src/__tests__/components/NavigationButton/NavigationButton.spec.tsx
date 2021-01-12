@@ -61,4 +61,8 @@ describe('<NavigationButton />', () => {
       flexDirection: 'row'
     })
   })
+
+  it('should render the button icon', (): void => {
+    expect(icon).toBeTruthy()
+  })
 })
