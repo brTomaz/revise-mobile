@@ -5,10 +5,10 @@ import { Logo, Question, QuizInfo } from '@/components'
 import { TypeQuestion } from '@/domain/entities/question'
 import { shuffleQuestions } from '@/helpers'
 import { useQuiz } from '@/hooks/quiz'
+import { Results } from '@/screens'
 import { getQuestionsFromAPI } from '@/services/api/usecases/get-questions'
 import theme from '@/styles/theme'
 import * as Styles from './styles'
-import { Results } from '@/screens'
 
 enum State {
   Loading = 'Loading',
@@ -37,8 +37,8 @@ const Main = () => {
         <ActivityIndicator size="large" color={theme.colors.secondary} />
       </Styles.LoaderWrapper>
     )
-  } else if (hasNextQuestion) {
-    return (
+  } else
+    return hasNextQuestion ? (
       <Styles.ScrollScreen>
         <Styles.Wrapper>
           <Styles.Header>
@@ -63,10 +63,9 @@ const Main = () => {
           />
         </Styles.Wrapper>
       </Styles.ScrollScreen>
+    ) : (
+      <Results />
     )
-  } else {
-    return <Results />
-  }
 }
 
 export default Main
