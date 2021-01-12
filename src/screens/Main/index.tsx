@@ -37,8 +37,8 @@ const Main = () => {
         <ActivityIndicator size="large" color={theme.colors.secondary} />
       </Styles.LoaderWrapper>
     )
-  } else if (hasNextQuestion) {
-    return (
+  } else
+    return hasNextQuestion ? (
       <Styles.ScrollScreen>
         <Styles.Wrapper>
           <Styles.Header>
@@ -63,10 +63,9 @@ const Main = () => {
           />
         </Styles.Wrapper>
       </Styles.ScrollScreen>
+    ) : (
+      <Results />
     )
-  } else {
-    return <Results />
-  }
 }
 
 export default Main
