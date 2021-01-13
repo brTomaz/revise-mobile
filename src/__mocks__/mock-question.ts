@@ -11,7 +11,5 @@ export const mockQuestion = {
     'indica a necessidade de mais pesquisas sobre o assunto.',
     'enfatiza a redução de ingestão de calorias pelos americanos.'
   ],
-  correctAnswer: 4,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  handleClick: () => {}
+  correctAnswer: 4
 }
