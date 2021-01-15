@@ -31,7 +31,7 @@ const Answer = ({ text, answerIndex, correctAnswerIndex }: AnswerProps) => {
       setState(State.Wrong)
     } else {
       setState(State.Correct)
-      const pointsEarned = getPoints(currentTries)
+      const pointsEarned = getPoints(currentTries + 1)
 
       showToast(
         'success',
@@ -39,7 +39,7 @@ const Answer = ({ text, answerIndex, correctAnswerIndex }: AnswerProps) => {
         `Acertou na ${currentTries + 1}ª tentativa`
       )
 
-      updateQuizContext(pointsEarned)
+      setTimeout(() => updateQuizContext(pointsEarned), 1000)
     }
   }
 

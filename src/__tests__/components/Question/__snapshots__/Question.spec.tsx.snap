@@ -8,6 +8,351 @@ exports[`<Question /> should match to snapshot 1`] = `
     ]
   }
 >
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FAFAFA",
+              "borderBottomLeftRadius": 0,
+              "borderRadius": 8,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+          ]
+        }
+      >
+        <View
+          style={Object {}}
+        >
+          <View
+            style={
+              Array [
+                Object {},
+                Object {},
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "stretch",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+                testID="image-placeholder"
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FAFAFA",
+              "borderRadius": 8,
+              "paddingBottom": 4,
+              "paddingLeft": 4,
+              "paddingRight": 4,
+              "paddingTop": 4,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 8,
+                "paddingBottom": 0,
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingTop": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#FAFAFA",
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#030617",
+                    "fontFamily": "Quicksand-SemiBold",
+                    "fontSize": 16,
+                  },
+                ]
+              }
+            >
+              Ao abordar o assunto “obesidade”, em uma seção de jornal, o autor
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 4,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#040923",
+                "borderRadius": 8,
+                "opacity": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 8,
+              }
+            }
+          >
+            <Text
+              state="Unavailable"
+              style={
+                Array [
+                  Object {
+                    "color": "#FAFAFA",
+                    "fontFamily": "Quicksand-Regular",
+                  },
+                ]
+              }
+            >
+              defende o consumo liberado de açúcar.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 4,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#040923",
+                "borderRadius": 8,
+                "opacity": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 8,
+              }
+            }
+          >
+            <Text
+              state="Unavailable"
+              style={
+                Array [
+                  Object {
+                    "color": "#FAFAFA",
+                    "fontFamily": "Quicksand-Regular",
+                  },
+                ]
+              }
+            >
+              aponta a gordura como o grande vilão da saúde.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 4,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#040923",
+                "borderRadius": 8,
+                "opacity": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 8,
+              }
+            }
+          >
+            <Text
+              state="Unavailable"
+              style={
+                Array [
+                  Object {
+                    "color": "#FAFAFA",
+                    "fontFamily": "Quicksand-Regular",
+                  },
+                ]
+              }
+            >
+              demonstra acreditar que a obesidade não é preocupante.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 4,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#040923",
+                "borderRadius": 8,
+                "opacity": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 8,
+              }
+            }
+          >
+            <Text
+              state="Unavailable"
+              style={
+                Array [
+                  Object {
+                    "color": "#FAFAFA",
+                    "fontFamily": "Quicksand-Regular",
+                  },
+                ]
+              }
+            >
+              indica a necessidade de mais pesquisas sobre o assunto.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 4,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#040923",
+                "borderRadius": 8,
+                "opacity": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 8,
+              }
+            }
+          >
+            <Text
+              state="Unavailable"
+              style={
+                Array [
+                  Object {
+                    "color": "#FAFAFA",
+                    "fontFamily": "Quicksand-Regular",
+                  },
+                ]
+              }
+            >
+              enfatiza a redução de ingestão de calorias pelos americanos.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
 </RCTScrollView>
 `;

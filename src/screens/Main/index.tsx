@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator } from 'react-native'
 
+import Results from '@/screens/Results'
 import { Logo, Question, QuizInfo } from '@/components'
 import { TypeQuestion } from '@/domain/entities/question'
 import { shuffleQuestions } from '@/helpers'
 import { useQuiz } from '@/hooks/quiz'
-import Results from '@/screens/Results'
 import { getQuestionsFromAPI } from '@/services/api/usecases/get-questions'
 import theme from '@/styles/theme'
 import * as Styles from './styles'
