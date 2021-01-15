@@ -4,12 +4,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { Logo, NavigationButton } from '@/components'
 import { configureTransition, sleep } from '@/helpers'
+import { Transition } from './protocols'
 import * as Styles from './styles'
-
-enum Transition {
-  Starting = 'Starting',
-  Completed = 'Completed'
-}
+import theme from '@/styles/theme'
 
 const Welcome = () => {
   const [transition, setTransition] = useState(Transition.Starting)
@@ -26,7 +23,6 @@ const Welcome = () => {
       Animated.timing(animatedOpacity, {
         toValue: 1,
         duration: 500,
-        delay: 500,
         useNativeDriver: true
       }).start()
     }
@@ -34,7 +30,7 @@ const Welcome = () => {
   })
 
   return (
-    <Styles.Wrapper>
+    <Styles.Wrapper transition={transition}>
       <Logo />
       {transition === Transition.Completed && (
         <Animated.View
@@ -48,7 +44,13 @@ const Welcome = () => {
             <Styles.Title>Consolide o seu conhecimento</Styles.Title>
             <NavigationButton
               text="Iniciar Questionário"
-              icon={<Icon name="chevron-right-circle" size={24} />}
+              icon={
+                <Icon
+                  name="chevron-right-circle"
+                  size={24}
+                  color={theme.colors.secondary}
+                />
+              }
               navigateTo="Main"
             />
           </Styles.Box>
