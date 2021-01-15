@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Animated } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { Logo, NavigationButton } from '@/components'
 import { configureTransition, sleep } from '@/helpers'
@@ -45,7 +46,11 @@ const Welcome = () => {
         >
           <Styles.Box>
             <Styles.Title>Consolide o seu conhecimento</Styles.Title>
-            <NavigationButton text="Iniciar Questionário" navigateTo="Main" />
+            <NavigationButton
+              text="Iniciar Questionário"
+              icon={<Icon name="chevron-right-circle" size={24} />}
+              navigateTo="Main"
+            />
           </Styles.Box>
         </Animated.View>
       )}

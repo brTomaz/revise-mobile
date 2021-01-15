@@ -2,23 +2,8 @@ import React, { useState } from 'react'
 
 import { getPoints, showToast } from '@/helpers'
 import { useQuiz } from '@/hooks/quiz'
+import { State, AnswerProps } from './protocols'
 import * as Styles from './styles'
-
-export type TextProps = {
-  state: string
-}
-
-export enum State {
-  Correct = 'Correct',
-  Wrong = 'Wrong',
-  Unavailable = 'Unavailable'
-}
-
-type AnswerProps = {
-  text: string
-  answerIndex: number
-  correctAnswerIndex: number
-}
 
 const Answer = ({ text, answerIndex, correctAnswerIndex }: AnswerProps) => {
   const [state, setState] = useState(State.Unavailable)
