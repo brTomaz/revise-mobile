@@ -1,6 +1,10 @@
 import styled, { css, DefaultTheme } from 'styled-components/native'
 
-import { TextProps, State } from '.'
+import { State } from './protocols'
+
+type TextProps = {
+  state?: State
+}
 
 export const Wrapper = styled.TouchableOpacity`
   ${({ theme }) => css`
