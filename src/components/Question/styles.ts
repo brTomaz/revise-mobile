@@ -17,7 +17,9 @@ export const InfoWrapper = styled.View`
 
 export const Info = styled(HTML).attrs(() => ({
   contentWidth: 340
-}))``
+}))`
+  padding: 8px;
+`
 
 export const AnswerAndStatementWrapper = styled.View`
   ${({ theme }) => css`

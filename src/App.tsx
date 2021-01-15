@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler'
-
 import React from 'react'
 import { Platform, StatusBar, UIManager } from 'react-native'
 import { ThemeProvider } from 'styled-components'
@@ -26,7 +25,7 @@ const App = () => (
       />
       <AppRoutes />
     </AppProvider>
-    <Toast ref={(ref) => Toast.setRef(ref)} />
+    <Toast ref={(ref) => Toast.setRef(ref)} visibilityTime={1600} />
   </ThemeProvider>
 )
 

@@ -15,7 +15,7 @@ export const ButtonText = styled.Text`
     font-family: ${theme.fonts.regular};
     font-size: 20px;
     font-weight: bold;
-    color: ${theme.colors.mainBg};
+    color: ${theme.colors.white};
     flex: 1;
     text-align: center;
   `}
@@ -23,7 +23,7 @@ export const ButtonText = styled.Text`
 
 export const IconContainer = styled.View`
   ${({ theme }) => css`
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.white};
     padding: 16px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;

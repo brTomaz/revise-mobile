@@ -1,9 +1,15 @@
 import styled, { css } from 'styled-components/native'
 
-export const Wrapper = styled.View`
-  ${({ theme }) => css`
+import { Transition } from './protocols'
+
+type WrapperProps = {
+  transition: Transition
+}
+
+export const Wrapper = styled.View<WrapperProps>`
+  ${({ theme, transition }) => css`
     flex: 1;
-    justify-content: space-between;
+    justify-content: ${transition === 'Starting' ? 'center' : 'space-between'};
     align-items: center;
     padding: 64px 32px 56px;
     background-color: ${theme.colors.mainBg};
@@ -11,7 +17,7 @@ export const Wrapper = styled.View`
 `
 
 export const Box = styled.View`
-  height: 100%;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
 `
